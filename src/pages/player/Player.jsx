@@ -42,6 +42,11 @@ class Player extends Component {
         event.preventDefault();
         this.handlePlayIdent();
       }
+      //"p" stops ident
+      if (event.keyCode === 80) {
+        event.preventDefault();
+        this.handleStopIdent();
+      }
     });
   }
 
@@ -60,8 +65,7 @@ class Player extends Component {
         ".wav",
     });
     this.file = new Audio(
-      process.env.PUBLIC_URL +
-        "/audio/idents/" +
+      "/audio/idents/" +
         "news-" +
         this.props.match.params.hour +
         "-" +

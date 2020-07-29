@@ -18,7 +18,7 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.1",
     "robotjs": "^0.6.0",
-    "time-convert": "0.0.2"
+    "serve": "^11.3.2"
   },
   "scripts": {
     "start": "react-scripts start",

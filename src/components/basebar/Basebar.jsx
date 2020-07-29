@@ -21,17 +21,15 @@ class Basebar extends Component {
     this.handleStopStab = this.handleStopStab.bind(this);
     this.handlePlayLateBed = this.handlePlayLateBed.bind(this);
     this.handlePreFadeModal = this.handlePreFadeModal.bind(this);
-    this.handlePlayPreFade = this.handlePlayPreFade.bind(this);
     this.handleStop = this.handleStop.bind(this);
     this.handleInitGPI = this.handleInitGPI.bind(this);
 
-    this.publicURL = props.publicURL;
     this.bedToPlayPath = "/audio/oldBed.wav";
-    this.bedToPlayFile = new Audio(this.publicURL + "/audio/oldBed.wav");
+    this.bedToPlayFile = new Audio("/audio/oldBed.wav");
     this.bongToPlayPath = "/audio/oldBong.wav";
-    this.bongToPlayFile = new Audio(this.publicURL + "/audio/oldBong.wav");
-    this.stabFile = new Audio(this.publicURL + "/audio/newSTC.wav");
-    this.lateBedFile = new Audio(this.publicURL + "/audio/newLateBed.wav");
+    this.bongToPlayFile = new Audio("/audio/oldBong.wav");
+    this.stabFile = new Audio("/audio/newSTC.wav");
+    this.lateBedFile = new Audio("/audio/newLateBed.wav");
 
     this.activeButtonColour = "#2bbc23";
   }
@@ -42,9 +40,35 @@ class Basebar extends Component {
 
   handleInitGPI() {
     document.addEventListener("keydown", (event) => {
+      //"b" plays bong
       if (event.keyCode === 66 && !this.state.isBongPlaying) {
         event.preventDefault();
         this.handlePlayBong();
+      }
+      //"t" toggles new/old
+      if (event.keyCode === 84) {
+        event.preventDefault();
+        this.handleToggleSwitch();
+      }
+      //"d" plays bed
+      if (event.keyCode === 68 && !this.state.isBedPlaying) {
+        event.preventDefault();
+        this.handlePlayBed();
+      }
+      //"s" plays the stab
+      if (event.keyCode === 83 && !this.state.isStabPlaying) {
+        event.preventDefault();
+        this.handlePlayStab();
+      }
+      //"l" plays the late bed
+      if (event.keyCode === 76 && !this.state.isLateBedPlaying) {
+        event.preventDefault();
+        this.handlePlayLateBed();
+      }
+      //"h" stops base bar things
+      if (event.keyCode === 72) {
+        event.preventDefault();
+        this.handleStop();
       }
     });
   }
@@ -156,9 +180,11 @@ class Basebar extends Component {
     this.setState({ isLateBedPlaying: false });
   }
 
-  handlePreFadeModal() {}
-
-  handlePlayPreFade() {}
+  handlePreFadeModal() {
+    if (this.props.openPreFadeModal) {
+      this.props.openPreFadeModal();
+    }
+  }
 
   handleStop() {
     this.setState({
@@ -238,7 +264,9 @@ class Basebar extends Component {
             </div>
 
             <div className="col">
-              <div className="baseBarButton">Prefade</div>
+              <div className="baseBarButton" onClick={this.handlePreFadeModal}>
+                Prefade
+              </div>
             </div>
 
             <div className="col">
