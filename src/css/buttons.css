@@ -1,0 +1,127 @@
+.selectableButton {
+  height: 150px;
+  border: 3px solid black;
+  border-radius: 7px;
+  background-color: lightsteelblue;
+  user-select: none;
+  color: #000;
+  font-size: 50px;
+  padding-top: 1%;
+}
+.selectableButton:active {
+  background-color: steelblue;
+}
+
+.fullHeightButtonRow {
+  height: 70vh;
+}
+
+.selectableButtonLarge {
+  height: 300px;
+  font-size: 100px;
+  padding: 20%;
+}
+
+.selectableMenuButtonLarge:active {
+  background-color: cyan;
+}
+
+.selectableMenuButtonLarge {
+  height: 250px;
+  padding: 10%;
+  width: 80%;
+  border: 3px solid black;
+  border-radius: 7px;
+  background-color: lightcyan;
+  user-select: none;
+  color: darkcyan;
+}
+.selectableMenuButtonLarge > h1 {
+  font-size: 100px;
+}
+
+#black-link-text {
+  color: #000;
+}
+
+.timerColumn {
+  padding-top: 15%;
+}
+
+.playColumn {
+  padding-top: 10%;
+}
+
+.recueColumn {
+  padding-top: 15%;
+}
+
+#playButton {
+  height: 300px;
+  position: absolute;
+  width: 100%;
+}
+
+#recueButton {
+  height: 150px;
+  width: 50%;
+}
+
+.play-icon {
+  margin-top: 25px;
+  margin-left: 75px;
+  width: 0;
+  height: 0;
+  border-top: 120px solid transparent;
+  border-bottom: 120px solid transparent;
+  border-left: 200px solid #f2f2f2;
+}
+
+.stop-icon {
+  display: block;
+  margin: 45px 0 0 20px;
+  width: 50px;
+  height: 50px;
+  background-color: #f2f2f2;
+}
+
+.recue-icon {
+  float: left;
+  margin: -55px 0 0 75px;
+  border-top: 30px solid transparent;
+  border-bottom: 30px solid transparent;
+  border-right: 40px solid #f2f2f2;
+}
+
+.baseBarButton {
+  background-color: #f2f2f2;
+  height: 100px;
+  border: 3px solid grey;
+  text-align: center;
+  font-size: 40px;
+  border-radius: 4px;
+}
+
+.baseBarStop {
+  height: 100px;
+  background-color: red;
+  text-align: center;
+  border-radius: 4px;
+}
+
+.baseBarToggle {
+  text-align: center;
+  height: 100px;
+  border: 3px solid grey;
+  border-radius: 5px;
+}
+
+.stopButton {
+  font-size: 50px;
+  color: white;
+  margin-top: 25px;
+}
+
+#selectedText {
+  font-size: 50px;
+}
