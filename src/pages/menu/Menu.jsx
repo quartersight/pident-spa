@@ -20,17 +20,17 @@ class Menu extends Component {
         console.log("Error", stderr);
       }
       console.log(stdout);
-    }).then(
-      exec("streamdeeck", (errorTwo, stdoutTwo, stderrTwo) => {
-        if (errorTwo) {
-          console.log("Error:", errorTwo);
-        }
-        if (stderrTwo) {
-          console.log("Error", stderrTwo);
-        }
-        console.log(stdoutTwo);
-      })
-    );
+    });
+
+    exec("streamdeeck", (errorTwo, stdoutTwo, stderrTwo) => {
+      if (errorTwo) {
+        console.log("Error:", errorTwo);
+      }
+      if (stderrTwo) {
+        console.log("Error", stderrTwo);
+      }
+      console.log(stdoutTwo);
+    });
   }
 
   render() {
