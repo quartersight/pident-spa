@@ -15,6 +15,7 @@ class Menu extends Component {
       try {
         const response = await fetch(apiURL, {
           method: "POST",
+          mode: "no-cors",
         });
         if (response.ok) {
           let text = await response.text();
@@ -35,6 +36,7 @@ class Menu extends Component {
       try {
         const response = await fetch(apiURL, {
           method: "POST",
+          mode: "no-cors",
         });
         if (response.ok) {
           let text = await response.text();
@@ -55,6 +57,7 @@ class Menu extends Component {
       try {
         const response = await fetch(apiURL, {
           method: "POST",
+          mode: "no-cors",
         });
         if (response.ok) {
           let text = await response.text();
