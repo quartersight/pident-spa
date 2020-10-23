@@ -3,7 +3,7 @@ import { FiPower } from "react-icons/fi";
 import { BsBootstrapReboot } from "react-icons/bs";
 import { GoSettings } from "react-icons/go";
 import { Link } from "react-router-dom";
-const shell = require("shelljs");
+import { exec } from "shelljs";
 
 class Menu extends Component {
   constructor(props) {
@@ -12,7 +12,7 @@ class Menu extends Component {
   }
 
   handleRebootController() {
-    shell.exec("~/pident-spa/reloadController.sh");
+    exec("~/pident-spa/reloadController.sh");
   }
 
   render() {
