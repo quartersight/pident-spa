@@ -14,8 +14,8 @@ app.post("/api/playbong", (req, res) => {
   pressKey();
 });
 
-app.post("/api/restartController", (req, res) => {
-  shell.exec("~/pident-spa/restartController.sh");
+app.post("/api/reloadController", (req, res) => {
+  shell.exec("~/pident-spa/reloadController.sh");
   console.log("Rebooting");
   res.send("Rebooting");
 });

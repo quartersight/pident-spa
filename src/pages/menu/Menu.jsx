@@ -11,7 +11,7 @@ class Menu extends Component {
   }
 
   handleRebootController() {
-    const apiURL = "http://localhost:8000/api/restartController";
+    const apiURL = "http://localhost:8000/api/reloadController";
 
     const restartServer = async () => {
       try {
