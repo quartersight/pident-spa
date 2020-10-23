@@ -21,13 +21,13 @@ app.post("/api/reloadController", (req, res) => {
 });
 
 app.post("/api/stopController", (req, res) => {
-  shell.exec("killall streamdeck && exit 0");
+  shell.exec("killall streamdeck");
   console.log("Stopped.");
   res.send("Stopped streamdeck");
 });
 
 app.post("/api/startController", (req, res) => {
-  shell.exec("streamdeck && exit 0");
+  shell.exec("streamdeck");
   console.log("Started.");
   res.send("Started streamdeck");
 });
