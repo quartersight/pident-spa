@@ -1,7 +1,6 @@
 import React, { Component } from "react";
-import { FaStop } from "react-icons/fa";
+import { FaStop, FaPlay } from "react-icons/fa";
 import { BsBootstrapReboot } from "react-icons/bs";
-import { VscDebugStart } from "react-icons/vsc";
 import { Link } from "react-router-dom";
 
 class Menu extends Component {
@@ -80,7 +79,7 @@ class Menu extends Component {
               <Link to="/1">
                 <div className="text-center selectableMenuButtonLarge">
                   <h1>
-                    <VscDebugStart />
+                    <FaPlay />
                   </h1>
                   <p>Start controller</p>
                 </div>
