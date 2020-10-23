@@ -15,21 +15,21 @@ app.post("/api/playbong", (req, res) => {
 });
 
 app.post("/api/reloadController", (req, res) => {
+  res.send("Rebooting");
   shell.exec("~/pident-spa/reloadController.sh");
   console.log("Rebooting");
-  res.send("Rebooting");
 });
 
 app.post("/api/stopController", (req, res) => {
+  res.send("Stopped streamdeck");
   shell.exec("killall streamdeck");
   console.log("Stopped.");
-  res.send("Stopped streamdeck");
 });
 
 app.post("/api/startController", (req, res) => {
+  res.send("Started streamdeck");
   shell.exec("streamdeck");
   console.log("Started.");
-  res.send("Started streamdeck");
 });
 
 const pressKey = () => robot.keyTap("b");
