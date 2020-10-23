@@ -11,7 +11,7 @@ class Menu extends Component {
   }
 
   handleRebootController() {
-    shell.config.execPath = shell.which("node");
+    shell.config.execPath = "/usr/bin/node";
     shell.exec("~/pident-spa/reloadController.sh");
   }
 
