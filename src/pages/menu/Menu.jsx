@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { FaStop, FaPlay } from "react-icons/fa";
 import { BsBootstrapReboot } from "react-icons/bs";
-import { Link } from "react-router-dom";
 
 class Menu extends Component {
   constructor(props) {
@@ -76,14 +75,15 @@ class Menu extends Component {
         <div className="container">
           <div className="row d-flex justify-content-center fullHeightButtonRow mt-5">
             <div className="col">
-              <Link to="/1">
-                <div className="text-center selectableMenuButtonLarge">
-                  <h1>
-                    <FaPlay />
-                  </h1>
-                  <p>Start controller</p>
-                </div>
-              </Link>
+              <div
+                className="text-center selectableMenuButtonLarge"
+                onClick={this.handleStartController}
+              >
+                <h1>
+                  <FaPlay />
+                </h1>
+                <p>Start controller</p>
+              </div>
             </div>
             <div className="col">
               <div
@@ -97,14 +97,15 @@ class Menu extends Component {
               </div>
             </div>
             <div className="col">
-              <Link to="/10">
-                <div className="text-center selectableMenuButtonLarge">
-                  <h1>
-                    <FaStop />
-                  </h1>
-                  <p>Stop controller</p>
-                </div>
-              </Link>
+              <div
+                className="text-center selectableMenuButtonLarge"
+                onClick={this.handleStopController}
+              >
+                <h1>
+                  <FaStop />
+                </h1>
+                <p>Stop controller</p>
+              </div>
             </div>
           </div>
         </div>{" "}
