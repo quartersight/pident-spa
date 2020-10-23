@@ -3,7 +3,7 @@ import { FiPower } from "react-icons/fi";
 import { BsBootstrapReboot } from "react-icons/bs";
 import { GoSettings } from "react-icons/go";
 import { Link } from "react-router-dom";
-const shell = require("shelljs");
+
 class Menu extends Component {
   constructor(props) {
     super();
@@ -11,8 +11,23 @@ class Menu extends Component {
   }
 
   handleRebootController() {
-    shell.config.execPath = "/usr/bin/node";
-    shell.exec("~/pident-spa/reloadController.sh");
+    const apiURL = "http://localhost:8000/api/restartController";
+
+    const restartServer = async () => {
+      try {
+        const response = await fetch(apiURL, {
+          method: "POST",
+        });
+        if (response.ok) {
+          let text = await response.text();
+          console.log(text);
+        }
+      } catch (e) {
+        console.log("there was an error:", e);
+      }
+    };
+
+    restartServer();
   }
 
   render() {
