@@ -16,7 +16,7 @@ app.post("/api/playbong", (req, res) => {
 
 app.post("/api/reloadController", (req, res) => {
   res.status(200).send("Rebooting");
-  shell.exec("killall streamdeck && streamdeck && exit 0");
+  shell.exec("killall streamdeck && gnome-terminal -e 'streamdeck'");
   console.log("Rebooting");
 });
 
@@ -28,7 +28,7 @@ app.post("/api/stopController", (req, res) => {
 
 app.post("/api/startController", (req, res) => {
   res.status(200).send("Started streamdeck");
-  shell.exec("streamdeck && exit 0");
+  shell.exec("gnome-terminal -e 'streamdeck'");
   console.log("Started.");
 });
 
