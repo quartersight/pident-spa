@@ -15,19 +15,19 @@ app.post("/api/playbong", (req, res) => {
 });
 
 app.post("/api/reloadController", (req, res) => {
-  res.send("Rebooting");
+  res.status(200).send("Rebooting");
   shell.exec("~/pident-spa/reloadController.sh");
   console.log("Rebooting");
 });
 
 app.post("/api/stopController", (req, res) => {
-  res.send("Stopped streamdeck");
+  res.status(200).send("Stopped streamdeck");
   shell.exec("killall streamdeck");
   console.log("Stopped.");
 });
 
 app.post("/api/startController", (req, res) => {
-  res.send("Started streamdeck");
+  res.status(200).send("Started streamdeck");
   shell.exec("streamdeck");
   console.log("Started.");
 });
