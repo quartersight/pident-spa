@@ -29,7 +29,7 @@ app.post("/api/stopController", (req, res) => {
 app.post("/api/startController", (req, res) => {
   res.status(200).send("Started streamdeck");
   shell.exec("gnome-terminal -e 'streamdeck'");
-  shell.exec("killall google-chrome");
+  shell.exec("killall chrome");
   shell.exec("gnome-terminal -e 'google-chrome --kiosk http://localhost:3000");
   console.log("Started.");
 });
