@@ -17,6 +17,9 @@ app.post("/api/playbong", (req, res) => {
 app.post("/api/reloadController", (req, res) => {
   res.status(200).send("Rebooting");
   shell.exec("killall streamdeck && gnome-terminal -e 'streamdeck'");
+  shell.exec(
+    "killall chrome && gnome-terminal -e 'google-chrome --kiosk http://localhost:3000'"
+  );
   console.log("Rebooting");
 });
 
