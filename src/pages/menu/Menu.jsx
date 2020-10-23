@@ -3,7 +3,7 @@ import { FiPower } from "react-icons/fi";
 import { BsBootstrapReboot } from "react-icons/bs";
 import { GoSettings } from "react-icons/go";
 import { Link } from "react-router-dom";
-import { exec } from "child_process";
+const shell = require("shelljs");
 
 class Menu extends Component {
   constructor(props) {
@@ -12,25 +12,7 @@ class Menu extends Component {
   }
 
   handleRebootController() {
-    exec("killall streamdeck", (error, stdout, stderr) => {
-      if (error) {
-        console.log("Error:", error);
-      }
-      if (stderr) {
-        console.log("Error", stderr);
-      }
-      console.log(stdout);
-    });
-
-    exec("streamdeeck", (errorTwo, stdoutTwo, stderrTwo) => {
-      if (errorTwo) {
-        console.log("Error:", errorTwo);
-      }
-      if (stderrTwo) {
-        console.log("Error", stderrTwo);
-      }
-      console.log(stdoutTwo);
-    });
+    shell.exec("~/pident-spa/reloadController.sh");
   }
 
   render() {
