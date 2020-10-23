@@ -20,6 +20,18 @@ app.post("/api/reloadController", (req, res) => {
   res.send("Rebooting");
 });
 
+app.post("/api/stopController", (req, res) => {
+  shell.exec("killall streamdeck && exit 0");
+  console.log("Stopped.");
+  res.send("Stopped streamdeck");
+});
+
+app.post("/api/startController", (req, res) => {
+  shell.exec("streamdeck && exit 0");
+  console.log("Started.");
+  res.send("Started streamdeck");
+});
+
 const pressKey = () => robot.keyTap("b");
 
 app.listen(port, () => console.log("Listening on port", port));

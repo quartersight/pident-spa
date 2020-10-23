@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import { FiPower } from "react-icons/fi";
+import { FaStop } from "react-icons/fa";
 import { BsBootstrapReboot } from "react-icons/bs";
-import { GoSettings } from "react-icons/go";
+import { VscDebugStart } from "react-icons/vsc";
 import { Link } from "react-router-dom";
 
 class Menu extends Component {
@@ -30,6 +30,46 @@ class Menu extends Component {
     restartServer();
   }
 
+  handleStartController() {
+    const apiURL = "http://localhost:8000/api/startController";
+
+    const startServer = async () => {
+      try {
+        const response = await fetch(apiURL, {
+          method: "POST",
+        });
+        if (response.ok) {
+          let text = await response.text();
+          console.log(text);
+        }
+      } catch (e) {
+        console.log("there was an error:", e);
+      }
+    };
+
+    startServer();
+  }
+
+  handleStopController() {
+    const apiURL = "http://localhost:8000/api/stopController";
+
+    const stopServer = async () => {
+      try {
+        const response = await fetch(apiURL, {
+          method: "POST",
+        });
+        if (response.ok) {
+          let text = await response.text();
+          console.log(text);
+        }
+      } catch (e) {
+        console.log("there was an error:", e);
+      }
+    };
+
+    stopServer();
+  }
+
   render() {
     return (
       <>
@@ -40,9 +80,9 @@ class Menu extends Component {
               <Link to="/1">
                 <div className="text-center selectableMenuButtonLarge">
                   <h1>
-                    <GoSettings />
+                    <VscDebugStart />
                   </h1>
-                  <p>Audio mixer</p>
+                  <p>Start controller</p>
                 </div>
               </Link>
             </div>
@@ -61,9 +101,9 @@ class Menu extends Component {
               <Link to="/10">
                 <div className="text-center selectableMenuButtonLarge">
                   <h1>
-                    <FiPower />
+                    <FaStop />
                   </h1>
-                  <p>Power</p>
+                  <p>Stop controller</p>
                 </div>
               </Link>
             </div>
