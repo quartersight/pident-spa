@@ -1,12 +1,36 @@
 import React, { Component } from "react";
-import { FiHelpCircle, FiPower } from "react-icons/fi";
+import { FiPower } from "react-icons/fi";
+import { BsBootstrapReboot } from "react-icons/bs";
 import { GoSettings } from "react-icons/go";
 import { Link } from "react-router-dom";
+import { exec } from "child_process";
 
 class Menu extends Component {
   constructor(props) {
     super();
     this.state = {};
+  }
+
+  handleRebootController() {
+    exec("killall streamdeck", (error, stdout, stderr) => {
+      if (error) {
+        console.log("Error:", error);
+      }
+      if (stderr) {
+        console.log("Error", stderr);
+      }
+      console.log(stdout);
+    }).then(
+      exec("streamdeeck", (errorTwo, stdoutTwo, stderrTwo) => {
+        if (errorTwo) {
+          console.log("Error:", errorTwo);
+        }
+        if (stderrTwo) {
+          console.log("Error", stderrTwo);
+        }
+        console.log(stdoutTwo);
+      })
+    );
   }
 
   render() {
@@ -26,14 +50,15 @@ class Menu extends Component {
               </Link>
             </div>
             <div className="col">
-              <Link to="/6">
-                <div className="text-center selectableMenuButtonLarge">
-                  <h1>
-                    <FiHelpCircle />
-                  </h1>
-                  <p>Documentation</p>
-                </div>
-              </Link>
+              <div
+                className="text-center selectableMenuButtonLarge"
+                onClick={this.handleRebootController}
+              >
+                <h1>
+                  <BsBootstrapReboot />
+                </h1>
+                <p>Reload controller</p>
+              </div>
             </div>
             <div className="col">
               <Link to="/10">
