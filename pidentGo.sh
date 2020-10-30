@@ -4,10 +4,10 @@ echo Changing directories...
 
 cd pident-spa
 
-gnome-terminal -- "node server.js"
+gnome-terminal -- node server.js
 
-gnome-terminal -- "npm start"
+gnome-terminal -- npm start
 
 sleep 10
 
-gnome-terminal -- "google-chrome --kiosk http://localhost:3000"
+gnome-terminal -- google-chrome --kiosk http://localhost:3000
