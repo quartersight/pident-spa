@@ -30,11 +30,11 @@ gpiTrigger.watch((e) => {
   requestBong();
 });
 
-document.addEventListener("keydown", (event) => {
-  event.preventDefault();
-  if (event === 66) {
-    requestBong();
-  }
-});
+// document.addEventListener("keydown", (event) => {
+//   event.preventDefault();
+//   if (event === 66) {
+//     requestBong();
+//   }
+// });
 
 process.on("SIGNIT", gpiTrigger.unExport());
