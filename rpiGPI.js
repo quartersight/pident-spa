@@ -21,6 +21,8 @@ const requestBong = async () => {
   }
 };
 
+console.log("Running");
+
 requestBong();
 
 gpiTrigger.watch((e) => {
@@ -37,4 +39,4 @@ gpiTrigger.watch((e) => {
 //   }
 // });
 
-process.on("SIGNIT", gpiTrigger.unExport());
+// process.on("SIGNIT", gpiTrigger.unExport());
