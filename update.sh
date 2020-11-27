@@ -29,7 +29,7 @@ killall streamdeck
 
 gnome-terminal -- streamdeck
 
-cd pident-spa
+cd ~/pident-spa
 
 gnome-terminal -- node server.js
 
