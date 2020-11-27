@@ -2,6 +2,7 @@
 
 cd ~/pident-spa
 
+git reset --hard HEAD
 git pull
 
 wait
