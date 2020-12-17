@@ -11,6 +11,7 @@ class Basebar extends Component {
       isStabPlaying: false,
       isLateBedPlaying: false,
       isPreFadePlaying: false,
+      isXmasPlaying:false,
     };
     this.handleToggleSwitch = this.handleToggleSwitch.bind(this);
     this.handlePlayBed = this.handlePlayBed.bind(this);
@@ -23,6 +24,7 @@ class Basebar extends Component {
     this.handlePreFadeModal = this.handlePreFadeModal.bind(this);
     this.handleStop = this.handleStop.bind(this);
     this.handleInitGPI = this.handleInitGPI.bind(this);
+    this.handlePlayXmasBed = this.handlePlayXmasBed.bind(this);
 
     this.bedToPlayPath = "/audio/oldBed.wav";
     this.bedToPlayFile = new Audio("/audio/oldBed.wav");
@@ -30,6 +32,9 @@ class Basebar extends Component {
     this.bongToPlayFile = new Audio("/audio/oldBong.wav");
     this.stabFile = new Audio("/audio/newSTC.wav");
     this.lateBedFile = new Audio("/audio/newLateBed.wav");
+
+    //special audio which is added manually here:
+    this.xmasBed2020 = new Audio("/audio/xmasBed2020.wav");
 
     this.activeButtonColour = "#2bbc23";
   }
@@ -69,6 +74,11 @@ class Basebar extends Component {
       if (event.keyCode === 72) {
         event.preventDefault();
         this.handleStop();
+      }
+      //x plays xmas bed
+      if (event.keyCode === 88) {
+        event.preventDefault();
+        this.handlePlayXmasBed();
       }
     });
   }
@@ -193,11 +203,24 @@ class Basebar extends Component {
       isStabPlaying: false,
       isLateBedPlaying: false,
       isPreFadePlaying: false,
+      isXmasPlaying: false
     });
     this.handleStopBed();
     this.handleStopBong();
     this.handleStopStab();
     this.handleStopLateBed();
+    this.handleStopXmasBed()
+  }
+
+  handlePlayXmasBed() {
+    if (!this.state.isXmasPlaying){
+      this.setState({isXmasPlaying: true})
+      this.xmasBed2020.play()
+    }
+  }
+
+  handleStopXmasBed() {
+    this.xmasBed2020.pause()
   }
 
   render() {
