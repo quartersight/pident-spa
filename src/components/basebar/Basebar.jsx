@@ -215,8 +215,14 @@ class Basebar extends Component {
   handlePlayXmasBed() {
     if (!this.state.isXmasPlaying){
       this.setState({isXmasPlaying: true})
+      this.xmasBed2020.currentTime = 0;
       this.xmasBed2020.play()
     }
+    this.xmasBed2020.addEventListener("ended", () => {
+      this.setState({
+        isXmasPlaying: false,
+      });
+    });
   }
 
   handleStopXmasBed() {
