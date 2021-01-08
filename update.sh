@@ -7,11 +7,14 @@ git pull
 
 wait
 
-cd ~/pident-spa/public/
+cd ~/pident-spa/public/east-audio
 
-git clone https://github.com/quartersight/east-audio
+git reset --hard HEAD
+git pull
 
 wait
+
+cd ../
 
 rm -r -f audio
 
