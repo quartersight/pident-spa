@@ -13,11 +13,11 @@ git clone https://github.com/quartersight/east-audio
 
 wait
 
-rm -r audio
+rm -r -f audio
 
 wait
 
-mv east-audio audio
+cp -R east-audio audio
 
 chmod a+x ~/pident-spa/pidentGo.sh
 
