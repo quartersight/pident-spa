@@ -1,16 +1,14 @@
 .selectableButton {
   height: 150px;
-  border: 3px solid black;
-  border-radius: 7px;
-  background-color: lightsteelblue;
+  border: 2px solid #191919;
+  border-radius: 3px;
+  background-color: #f2f2f2;
   user-select: none;
-  color: #000;
+  color: #191919;
   font-size: 50px;
   padding-top: 1%;
 }
-.selectableButton:active {
-  background-color: steelblue;
-}
+
 
 .fullHeightButtonRow {
   height: 70vh;
@@ -22,15 +20,13 @@
   padding: 20%;
 }
 
-.selectableMenuButtonLarge:active {
-  background-color: cyan;
-}
+
 
 .selectableMenuButtonLarge {
   height: 250px;
   padding: 10%;
   width: 80%;
-  border: 3px solid black;
+  border: 2px solid #191919;
   border-radius: 7px;
   background-color: lightcyan;
   user-select: none;
@@ -96,17 +92,17 @@
 .baseBarButton {
   background-color: #f2f2f2;
   height: 100px;
-  border: 3px solid grey;
+  border: 1px solid #191919;
   text-align: center;
   font-size: 40px;
-  border-radius: 4px;
+  border-radius: 2px;
 }
 
 .baseBarStop {
   height: 100px;
-  background-color: red;
+  background-color: #BE3434;
   text-align: center;
-  border-radius: 4px;
+  border-radius: 1px;
 }
 
 .baseBarToggle {

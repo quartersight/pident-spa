@@ -32,7 +32,7 @@ class Basebar extends Component {
     this.lateBedFile = new Audio("/audio/newLateBed.wav");
 
 
-    this.activeButtonColour = "#2bbc23";
+    this.activeButtonColour = "#2DC422";
   }
 
   componentDidMount() {
@@ -42,32 +42,32 @@ class Basebar extends Component {
   handleInitGPI() {
     document.addEventListener("keydown", (event) => {
       //"b" plays bong
-      if (event.keyCode === 66 && !this.state.isBongPlaying) {
+      if (event.key === "b" && !this.state.isBongPlaying) {
         event.preventDefault();
         this.handlePlayBong();
       }
       //"t" toggles new/old
-      if (event.keyCode === 84) {
+      if (event.key === "t") {
         event.preventDefault();
         this.handleToggleSwitch();
       }
       //"d" plays bed
-      if (event.keyCode === 68 && !this.state.isBedPlaying) {
+      if (event.key === "d" && !this.state.isBedPlaying) {
         event.preventDefault();
         this.handlePlayBed();
       }
       //"s" plays the stab
-      if (event.keyCode === 83 && !this.state.isStabPlaying) {
+      if (event.key === "s" && !this.state.isStabPlaying) {
         event.preventDefault();
         this.handlePlayStab();
       }
       //"l" plays the late bed
-      if (event.keyCode === 76 && !this.state.isLateBedPlaying) {
+      if (event.key === "l" && !this.state.isLateBedPlaying) {
         event.preventDefault();
         this.handlePlayLateBed();
       }
       //"h" stops base bar things
-      if (event.keyCode === 72) {
+      if (event.key === "h") {
         event.preventDefault();
         this.handleStop();
       }
@@ -214,8 +214,8 @@ class Basebar extends Component {
                 style={{
                   backgroundColor:
                     this.state.audioStyleSelector === "old"
-                      ? "lightcyan"
-                      : "lightgrey",
+                      ? "#cc9999"
+                      : "#99cc99",
                 }}
               >
                 Selected: <br />

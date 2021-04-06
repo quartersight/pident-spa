@@ -38,12 +38,12 @@ class Player extends Component {
     //GPI Triggers
     document.addEventListener("keydown", (event) => {
       //"i" key triggers ident. can be triggered from either gpi (using gpiHandler.js), which is not yet set up on the vision mixer, or from elgato streamdeck
-      if (event.keyCode === 73 && this.state.loadedIdent !== null) {
+      if (event.key === "i" && this.state.loadedIdent !== null) {
         event.preventDefault();
         this.handlePlayIdent();
       }
       //"p" stops ident
-      if (event.keyCode === 80) {
+      if (event.key === "p") {
         event.preventDefault();
         this.handleStopIdent();
       }
@@ -155,8 +155,8 @@ class Player extends Component {
                 id="playButton"
                 style={{
                   backgroundColor: this.state.isPlaying
-                    ? "rgb(45,196,34)"
-                    : "#67A0F4",
+                    ? "#2dc422"
+                    : "#1E8317",
                 }}
               >
                 <div className="play-icon"></div>
@@ -168,7 +168,8 @@ class Player extends Component {
                 className="btn btn-large btn-primary mx-4"
                 id="recueButton"
                 style={{
-                  backgroundColor: this.state.isPlaying ? "red" : "darkred",
+                  backgroundColor: this.state.isPlaying ? "#BE3434"
+                  : "#822424",
                   color: this.state.isPlaying ? "white" : "gray",
                 }}
               >

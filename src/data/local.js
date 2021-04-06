@@ -48,14 +48,6 @@ const localData = [
     ten: true,
   },
   {
-    name: "David Whiteley",
-    displayName: "David",
-    initials: "dw",
-    one: false,
-    six: true,
-    ten: false,
-  },
-  {
     name: "Leigh Milner",
     displayName: "Leigh",
     initials: "lm",
@@ -86,7 +78,15 @@ const localData = [
     one: false,
     six: false,
     ten: true,
+  },{
+    name: "Felicity Simper",
+    displayName: "Fliss",
+    initials: "fs",
+    one: true,
+    six: false,
+    ten: false,
   },
+  
 ];
 
 export default localData;

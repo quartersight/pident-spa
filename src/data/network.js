@@ -20,11 +20,6 @@ const networkData = [
     initials: "he",
   },
   {
-    name: "Simon McCoy",
-    displayName: "Simon",
-    initials: "sm",
-  },
-  {
     name: "Jane Hill",
     displayName: "Jane",
     initials: "jh",
@@ -44,6 +39,11 @@ const networkData = [
     displayName: "Ben",
     initials: "bb",
   },
+  {
+    name: "Kate Silverton",
+    displayName: "Kate",
+    initials: "ks"
+  }
 ];
 
 export default networkData;
