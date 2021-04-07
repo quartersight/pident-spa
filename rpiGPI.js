@@ -39,4 +39,4 @@ gpiTrigger.watch((e) => {
 //   }
 // });
 
-// process.on("SIGNIT", gpiTrigger.unExport());
+process.on("SIGNIT", gpiTrigger.unExport());
