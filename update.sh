@@ -24,6 +24,8 @@ cp -R east-audio audio
 
 chmod a+x ~/pident-spa/pidentGo.sh
 
+chmod a+x ~/pident-spa/update.sh
+
 chmod a+x ~/pident-spa/reloadController.sh
 
 killall chrome
