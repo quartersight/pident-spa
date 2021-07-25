@@ -6,6 +6,7 @@ const localData = [
     one: true,
     six: true,
     ten: false,
+    generic: true
   },
   {
     name: "Amelia Reynolds",
@@ -14,6 +15,7 @@ const localData = [
     one: true,
     six: true,
     ten: true,
+    generic: true
   },
   {
     name: "Susie Fowler-Watt",
@@ -22,6 +24,7 @@ const localData = [
     one: true,
     six: true,
     ten: true,
+    generic: true
   },
   {
     name: "Louise Priest",
@@ -30,6 +33,7 @@ const localData = [
     one: true,
     six: false,
     ten: false,
+    generic: true
   },
   {
     name: "Melissa Rudd",
@@ -38,6 +42,7 @@ const localData = [
     one: true,
     six: false,
     ten: true,
+    generic: true
   },
   {
     name: "Shaun Peel",
@@ -46,6 +51,7 @@ const localData = [
     one: true,
     six: false,
     ten: true,
+    generic: true
   },
   {
     name: "Leigh Milner",
@@ -54,6 +60,7 @@ const localData = [
     one: false,
     six: false,
     ten: true,
+    generic: true
   },
   {
     name: "Alex Dunlop",
@@ -62,6 +69,7 @@ const localData = [
     one: false,
     six: false,
     ten: true,
+    generic: true
   },
   {
     name: "Tom Williams",
@@ -70,6 +78,7 @@ const localData = [
     one: false,
     six: false,
     ten: true,
+    generic: true
   },
   {
     name: "Andrew Sinclair",
@@ -78,6 +87,7 @@ const localData = [
     one: false,
     six: false,
     ten: true,
+    generic: true
   },{
     name: "Felicity Simper",
     displayName: "Fliss",
@@ -85,6 +95,7 @@ const localData = [
     one: true,
     six: false,
     ten: false,
+    generic: true
   },
   
 ];

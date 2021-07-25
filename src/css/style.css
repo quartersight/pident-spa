@@ -1,0 +1,54 @@
+.footer {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	margin: 0 auto 5px auto;
+	min-height: 100px;
+}
+
+.basebar-button {
+	background-color: lightsteelblue;
+	border: 5px solid #fff;
+}
+
+.basebar-button.playing {
+	background-color: lightgreen;
+}
+
+.basebar-stop-button {
+	background-color: red;
+	border: 5px solid white;
+}
+.basebar-stop-icon {
+	color: white;
+	font-size: 50px;
+}
+
+.outer-progress-bar {
+	opacity: 100;
+	bottom: 0;
+	height: 10px;
+	width: 100%;
+	background-color: lightskyblue;
+}
+
+#bed-inner-progress-bar {
+	height: 100%;
+	width: 0%;
+	background-color: blue;
+}
+#bong-inner-progress-bar {
+	height: 100%;
+	width: 0%;
+	background-color: blue;
+}
+#stab-inner-progress-bar {
+	height: 100%;
+	width: 0%;
+	background-color: blue;
+}
+#late-inner-progress-bar {
+	height: 100%;
+	width: 0%;
+	background-color: blue;
+}

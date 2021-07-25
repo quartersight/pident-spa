@@ -34,6 +34,13 @@ class Hour extends Component {
                 </div>
               </Link>
             </div>
+            <div className="col">
+              <Link to="/0">
+                <div className="selectableButton text-center selectableButtonLarge">
+                  G
+                </div>
+              </Link>
+            </div>
           </div>
         </div>
       </>

@@ -1,14 +1,13 @@
 .selectableButton {
   height: 150px;
   border: 2px solid #191919;
-  border-radius: 3px;
+  border-radius: 30 px;
   background-color: #f2f2f2;
   user-select: none;
   color: #191919;
   font-size: 50px;
   padding-top: 1%;
 }
-
 
 .fullHeightButtonRow {
   height: 70vh;
@@ -17,10 +16,8 @@
 .selectableButtonLarge {
   height: 300px;
   font-size: 100px;
-  padding: 20%;
+  padding: 20% 0% 20% 0%;
 }
-
-
 
 .selectableMenuButtonLarge {
   height: 250px;
@@ -100,7 +97,7 @@
 
 .baseBarStop {
   height: 100px;
-  background-color: #BE3434;
+  background-color: #be3434;
   text-align: center;
   border-radius: 1px;
 }

@@ -10,4 +10,4 @@ gnome-terminal -- serve -s build
 
 wait
 
-gnome-terminal -- google-chrome-stable --start-fullscreen --incognito --simulate-outdated-no-au='Tue, 31 Dec 2099 23:59:59 GMT' --app=http://localhost:5000
+gnome-terminal -- google-chrome --kiosk --disable-component-update --app=http://localhost:5000

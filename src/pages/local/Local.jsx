@@ -83,6 +83,28 @@ class Local extends Component {
                 } else {
                   return <></>;
                 }
+              } else if (this.props.match.params.hour === "0") {
+                if (presenter.generic) {
+                  return (
+                    <Link
+                      key={key}
+                      id="black-link-text"
+                      to={
+                        "/" +
+                        this.props.match.params.hour +
+                        "/" +
+                        this.props.match.params.network +
+                        "/" +
+                        presenter.initials
+                      }
+                      className="selectableButton text-center col-md-3 mx-4"
+                    >
+                      <div key={key}>{presenter.displayName}</div>
+                    </Link>
+                  );
+                } else {
+                  return <></>;
+                }
               } else {
                 return <></>;
               }
