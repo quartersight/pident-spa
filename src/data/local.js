@@ -15,7 +15,7 @@ const localData = [
     one: true,
     six: true,
     ten: true,
-    generic: true
+    generic: false
   },
   {
     name: "Susie Fowler-Watt",
@@ -60,7 +60,7 @@ const localData = [
     one: false,
     six: false,
     ten: true,
-    generic: true
+    generic: false
   },
   {
     name: "Alex Dunlop",
@@ -78,7 +78,7 @@ const localData = [
     one: false,
     six: false,
     ten: true,
-    generic: true
+    generic: false
   },
   {
     name: "Andrew Sinclair",
