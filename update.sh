@@ -7,20 +7,13 @@ git pull
 
 wait
 
-cd ~/pident-spa/public/east-audio
+cd ~/pident-spa
 
-git reset --hard HEAD
-git pull
+node downloadNewAudio.js
 
-wait
-
-cd ../
-
-rm -r -f audio
+node dbQueryPresenterList.js
 
 wait
-
-cp -R east-audio audio
 
 chmod a+x ~/pident-spa/pidentGo.sh
 
