@@ -9,7 +9,7 @@ wait
 
 cd ~/pident-spa
 
-gnome-terminal -- node downloadNewAudio.js
+node downloadNewAudio.js
 
 wait 
 
