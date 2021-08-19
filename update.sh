@@ -11,6 +11,8 @@ cd ~/pident-spa
 
 gnome-terminal -- node downloadNewAudio.js
 
+wait 
+
 gnome-terminal -- node dbQueryPresenterList.js
 
 chmod a+x ~/pident-spa/pidentGo.sh
