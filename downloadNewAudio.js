@@ -12,17 +12,15 @@ function main(bucketName = 'wp-sl-pident') {
     const cwd = path.join(__dirname);
     const remoteFileList = [];
     // Creates a client
-    const storage = new Storage();
+    const storage = new Storage({projectId: "bbc-east-pident-audio"});
 
     async function listFiles() {
         // Lists files in the bucket
         const [files] = await storage.bucket(bucketName).getFiles();
 
-        console.log('Done.');
         files.forEach(file => {
             remoteFileList.push(file.name);
         });
-        console.log(remoteFileList)
     }
 
 
