@@ -4,16 +4,11 @@ killall chrome
 killall streamdeck
 
 gnome-terminal -- streamdeck
+
 cd ~/pident-spa
 
 git reset --hard HEAD
 git pull
-
-wait
-
-cd ~/pident-spa
-
-node downloadNewAudio.js
 
 wait 
 
@@ -27,11 +22,13 @@ chmod a+x ~/pident-spa/update.sh
 
 chmod a+x ~/pident-spa/reloadController.sh
 
-
-
 cd ~/pident-spa
 
-npm -i -g serve
+node downloadNewAudio.js
+
+wait
+
+cd ~/pident-spa
 
 npm run build
 
