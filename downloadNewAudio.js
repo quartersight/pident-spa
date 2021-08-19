@@ -36,9 +36,7 @@ function main(bucketName = 'wp-sl-pident') {
 
         // [optional] a good log can help you in debugging
         console.log(
-            "The object " + srcFilename +
-            " coming from bucket " + bucketName +
-            " has been downloaded to " + destFilename
+            "The ident " + srcFilename + " has been downloaded to /public/audio" + destFilename
         );
     }
 
