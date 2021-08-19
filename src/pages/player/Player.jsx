@@ -12,6 +12,7 @@ class Player extends Component {
       loadedIdent: null,
       isPlaying: false,
       timeRemaining: null,
+      exists: false
     };
     this.handleInitialStateSet = this.handleInitialStateSet.bind(this);
     this.handlePlayIdent = this.handlePlayIdent.bind(this);
@@ -25,6 +26,7 @@ class Player extends Component {
     this.file.addEventListener("loadedmetadata", () => {
       let newTimeSet = this.msToTime(this.file.duration * 1000);
       document.querySelector("#countdown-text").innerHTML = newTimeSet;
+      this.setState({exists: true, timeRemaining: this.file.duration * 1000})
     });
     this.file.addEventListener("ended", () => {
       this.setState({ isPlaying: false });
@@ -138,15 +140,15 @@ class Player extends Component {
                 className="border border-dark text-center text-monospace"
                 id="countdown-text"
               >
-                00:00.00
+                {!this.state.exists ? "Error: No Ident" : this.msToTime(this.state.timeRemaining)}
               </h3>
-              <h4
+               <h4
                 className="border border-dark text-center mt-4"
                 id="countdown-text"
               >
                 Loaded ident: <br />
-                {this.state.loadedIdent}
-              </h4>
+                {this.state.exists ? this.state.loadedIdent : "No ident found"}
+              </h4> 
             </div>
             <div className="col playColumn">
               <div

@@ -39,4 +39,4 @@ gnome-terminal -- node server.js
 
 gnome-terminal -- serve -s build
 
-gnome-terminal -- google-chrome-stable --start-fullscreen --incognito --disable-component-update --app=http://localhost:5000
+gnome-terminal -- google-chrome-stable --kiosk --incognito --disable-component-update --app=http://localhost:5000
