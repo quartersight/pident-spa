@@ -9,11 +9,9 @@ wait
 
 cd ~/pident-spa
 
-node downloadNewAudio.js
+gnome-terminal -- node downloadNewAudio.js
 
-node dbQueryPresenterList.js
-
-wait
+gnome-terminal -- node dbQueryPresenterList.js
 
 chmod a+x ~/pident-spa/pidentGo.sh
 
