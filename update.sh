@@ -1,5 +1,9 @@
 #!/bin/bash
+killall chrome
 
+killall streamdeck
+
+gnome-terminal -- streamdeck
 cd ~/pident-spa
 
 git reset --hard HEAD
@@ -23,11 +27,7 @@ chmod a+x ~/pident-spa/update.sh
 
 chmod a+x ~/pident-spa/reloadController.sh
 
-killall chrome
 
-killall streamdeck
-
-gnome-terminal -- streamdeck
 
 cd ~/pident-spa
 
